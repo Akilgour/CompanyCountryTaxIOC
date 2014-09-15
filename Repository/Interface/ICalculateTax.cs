@@ -8,9 +8,8 @@ namespace Repository.Interface
 {
     public interface ICalculateTax
     {
-
-        public int TaxRate { get; }
-        public int Pay { get;  }
-        
+        int TaxRate { get; }
+        int Pay { get; }
+        int CalculateTax();
     }
 }
