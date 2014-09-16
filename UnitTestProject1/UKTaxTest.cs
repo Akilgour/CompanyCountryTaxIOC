@@ -5,19 +5,19 @@ using Repository;
 namespace UnitTestProject1
 {
     [TestClass]
-    public class FranceTaxTest
+    public class UKTaxTest
     {
         [TestMethod]
         public void CalculateTax_AreEqual()
         {
             //Arange
-            var company = new FranceTax(100);
+            var company = new UKTax(100);
 
             //Act
             var value = company.CalculateTax();
 
             //Assert
-            Assert.AreEqual(value, 70);
+            Assert.AreEqual(value, 60);
 
         }
     }
