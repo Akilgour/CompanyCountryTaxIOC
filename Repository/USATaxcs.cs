@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-   public class FranceTax : ICalculateTax
+    public class USATaxcs : ICalculateTax
     {
-
-       public FranceTax(int Pay)
+        public USATaxcs(int Pay)
        {
            this.Pay = Pay;
            TaxRate = 30;
