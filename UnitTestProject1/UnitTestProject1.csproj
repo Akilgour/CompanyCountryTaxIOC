@@ -53,6 +53,7 @@
     <Compile Include="CompanyBUKTaxTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CompanyATaxTest.cs" />
+    <Compile Include="FranceTaxTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Repository\Repository.csproj">
