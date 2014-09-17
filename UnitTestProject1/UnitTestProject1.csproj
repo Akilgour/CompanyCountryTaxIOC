@@ -55,12 +55,13 @@
     <Compile Include="CompanyATaxTest.cs" />
     <Compile Include="FranceTaxTest.cs" />
     <Compile Include="UKTaxTest.cs" />
+    <Compile Include="IOCTest.cs" />
     <Compile Include="USATaxTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IOC\IOC.csproj">
+    <ProjectReference Include="..\IOC\InversionOfControl.csproj">
       <Project>{d4636a39-9263-4665-abfd-b023845c49d8}</Project>
-      <Name>IOC</Name>
+      <Name>InversionOfControl</Name>
     </ProjectReference>
     <ProjectReference Include="..\Repository\Repository.csproj">
       <Project>{f68268a0-4c37-4850-84f1-83879eb6d536}</Project>

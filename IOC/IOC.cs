@@ -4,17 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IOC
+namespace InversionOfControl
 {
     public class IOC
     {
        
         public IOC()
         {
-            Items = new List<IOCItemcs>();
+            Items = new List<IOCItem>();
         }
 
-        public List<IOCItemcs> Items { get; set; }
+        public List<IOCItem> Items { get; set; }
 
+   
+        public void Register<T>( string ClassName )
+        {
+            var item = new IOCItem(typeof(T), ClassName);
+            Items.Add(item);
+        }
     }
 }

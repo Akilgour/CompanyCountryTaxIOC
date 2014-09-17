@@ -19,7 +19,13 @@ namespace UnitTestProject1
 
             //Assert
             Assert.AreEqual(value, 100);
+        }
+
+        [TestMethod]
+        public void asdf()
+        {
 
         }
+
     }
 }
