@@ -47,7 +47,7 @@ namespace UnitTestProject1
         }
 
         [TestMethod]
-        public void GetSingle()
+        public void GetSingleByClassName()
         {
             //Arange
             var ioc = new IOC();
@@ -59,6 +59,21 @@ namespace UnitTestProject1
             //Asert
             Assert.IsInstanceOfType(calculateTax, typeof(CompanyATax));
         }
+
+        [TestMethod]
+        public void GetSingle()
+        {
+            //Arange
+            var ioc = new IOC();
+            ioc.Register<ICalculateTax>("CompanyATax");
+
+            //Act
+            var calculateTax = ioc.GetSingleByClassName<ICalculateTax>();
+
+            //Asert
+            Assert.IsInstanceOfType(calculateTax, typeof(CompanyATax));
+        }
+
 
     }
 }

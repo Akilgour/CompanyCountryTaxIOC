@@ -47,6 +47,14 @@ namespace InversionOfControl
             return (T)Activator.CreateInstance(types); 
         }
 
+        public T GetSingleByClassName<T>()
+        {
+            var className = Items.Where(x => x.Interface.Name == typeof(T).Name).Single().ClassName;
+
+            var types = GetSingleByClassName(typeof(T), className);
+            return (T)Activator.CreateInstance(types);
+        }
+
         private Type GetSingleByClassName(Type type, string aaa)
         {
 
