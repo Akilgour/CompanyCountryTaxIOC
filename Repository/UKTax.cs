@@ -14,6 +14,9 @@ namespace Repository
             this.Pay = Pay;
             TaxRate = 40;
         }
+
+        public UKTax() { }
+        
         public int TaxRate
         { get; private set; }
 

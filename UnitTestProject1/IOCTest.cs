@@ -2,6 +2,16 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using InversionOfControl;
 using Repository.Interface;
+using Repository;
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using Repository.Interface;
+
 
 namespace UnitTestProject1
 {
@@ -20,6 +30,20 @@ namespace UnitTestProject1
             //Asert
             Assert.AreEqual(ioc.Items.Count, 1);
 
+        }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            //Arange
+            var ioc = new IOC();
+            ioc.Register<ICalculateTax>("CompanyATax");
+
+            //Act
+            var calculateTax = ioc.GetList<ICalculateTax>("CompanyATax").ToList();
+
+            //Asert
+            Assert.IsInstanceOfType(calculateTax.First(), typeof(CompanyATax));
         }
     }
 }

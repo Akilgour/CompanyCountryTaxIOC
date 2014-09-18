@@ -15,6 +15,11 @@ namespace Repository
             TaxRate = 0;
         }
 
+        public CompanyATax( )
+        {
+      
+        }
+
         public int TaxRate
         { get; private set; }
 

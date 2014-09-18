@@ -16,6 +16,9 @@ namespace Repository
            this.Pay = Pay;
            TaxRate = 10;
        }
+       
+       public CompanyBUKTax() { }
+       
        public int TaxRate
        { get; private set; }
 
