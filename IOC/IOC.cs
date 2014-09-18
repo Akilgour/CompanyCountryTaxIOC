@@ -40,5 +40,21 @@ namespace InversionOfControl
             return types;
         }
 
+
+        public T GetSingleByClassName<T>(string className)
+        {
+            var types = GetSingleByClassName(typeof(T), className);
+            return (T)Activator.CreateInstance(types); 
+        }
+
+        private Type GetSingleByClassName(Type type, string aaa)
+        {
+
+            var types = AppDomain.CurrentDomain.GetAssemblies()
+    .SelectMany(s => s.GetTypes())
+    .Where(p => type.IsAssignableFrom(p) && p.IsClass && p.IsPublic && !p.IsGenericType && p.Name == aaa);
+            return types.First();
+        }
+
     }
 }
