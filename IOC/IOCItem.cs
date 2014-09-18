@@ -13,11 +13,17 @@ namespace InversionOfControl
 
         }
 
-        public IOCItem(Type Interface, string ClassName)
+        public IOCItem(Type Interface, string ClassName) : this(Interface, ClassName, string.Empty)
+        {           
+        }
+
+        public IOCItem(Type Interface, string ClassName, string Country)
         {
             this.Interface = Interface;
             this.ClassName = ClassName;
+            this.Country = Country;
         }
+
 
         public Type Interface { get; private set; }
 

@@ -17,13 +17,19 @@ namespace InversionOfControl
         public List<IOCItem> Items { get; set; }
 
 
-        public void Register<T>(string ClassName)
+        public void Register<T>(string ClassName, string CountryName)
+        {
+            var item = new IOCItem(typeof(T), ClassName, CountryName);
+            Items.Add(item);
+        }
+
+        public void Register<T>(string ClassName )
         {
             var item = new IOCItem(typeof(T), ClassName);
             Items.Add(item);
         }
 
-
+        
         public IEnumerable<T> GetList<T>(string aaa)
         {
             var types = GetAllClassesOfType(typeof(T), aaa);
@@ -62,6 +68,15 @@ namespace InversionOfControl
     .SelectMany(s => s.GetTypes())
     .Where(p => type.IsAssignableFrom(p) && p.IsClass && p.IsPublic && !p.IsGenericType && p.Name == aaa);
             return types.First();
+        }
+
+        public T GetSingleByCountry<T>(string Country)
+        {
+            var className = Items.Where(x => x.Country == Country).Single().ClassName;
+
+
+            var types = GetSingleByClassName(typeof(T), className);
+            return (T)Activator.CreateInstance(types);
         }
 
     }

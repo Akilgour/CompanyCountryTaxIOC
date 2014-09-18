@@ -21,7 +21,7 @@ namespace Repository
        { get; private set; }
 
        public int Pay
-       { get; private set; }
+       { get; set; }
 
        public int CalculateTax()
        {

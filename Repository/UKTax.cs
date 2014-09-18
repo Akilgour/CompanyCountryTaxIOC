@@ -18,10 +18,10 @@ namespace Repository
         public UKTax() { }
         
         public int TaxRate
-        { get; private set; }
+        { get; set; }
 
         public int Pay
-        { get; private set; }
+        { get; set; }
 
         public int CalculateTax()
         {

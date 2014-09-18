@@ -9,7 +9,7 @@ namespace Repository.Interface
     public interface ICalculateTax
     {
         int TaxRate { get; }
-        int Pay { get; }
+        int Pay { get; set; }
         int CalculateTax();
     }
 }

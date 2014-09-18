@@ -15,16 +15,17 @@ namespace Repository
             TaxRate = 0;
         }
 
-        public CompanyATax( )
+        public CompanyATax()
+            : this(0)
         {
-      
+
         }
 
         public int TaxRate
         { get; private set; }
 
         public int Pay
-        { get; private set; }
+        { get; set; }
 
         public int CalculateTax()
         {
