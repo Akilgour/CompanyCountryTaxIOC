@@ -18,7 +18,7 @@ namespace UnitTestProject1
             var value = company.CalculateTax();
 
             //Assert
-            Assert.AreEqual(value, 70);
+            Assert.AreEqual(value, 50);
 
         }
     }

@@ -13,10 +13,10 @@ namespace Repository
        public FranceTax(int Pay)
        {
            this.Pay = Pay;
-           TaxRate = 30;
+           TaxRate = 50;
        }
 
-       public FranceTax() { }
+       public FranceTax() : this(0) { }
 
 
        public int TaxRate

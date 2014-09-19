@@ -46,7 +46,7 @@
     <Compile Include="Interface\ICalculateTax.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UKTax.cs" />
-    <Compile Include="USATaxcs.cs" />
+    <Compile Include="USATax.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

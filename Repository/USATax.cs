@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class USATaxcs : ICalculateTax
+    public class USATax : ICalculateTax
     {
-        public USATaxcs(int Pay)
+        public USATax(int Pay)
        {
            this.Pay = Pay;
            TaxRate = 30;
        }
 
-        public USATaxcs() { }
+        public USATax() : this(0) { }
 
        public int TaxRate
        { get; private set; }

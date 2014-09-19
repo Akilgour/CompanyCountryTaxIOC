@@ -7,27 +7,27 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-   public class CompanyBUKTax : ICalculateTax
+    public class CompanyBUKTax : ICalculateTax
     {
-       private int p;
+        private int p;
 
-       public CompanyBUKTax(int Pay)
-       {
-           this.Pay = Pay;
-           TaxRate = 10;
-       }
-       
-       public CompanyBUKTax() { }
-       
-       public int TaxRate
-       { get; set; }
+        public CompanyBUKTax(int Pay)
+        {
+            this.Pay = Pay;
+            TaxRate = 10;
+        }
 
-       public int Pay
-       { get; set; }
+        public CompanyBUKTax() : this(0) { }
 
-       public int CalculateTax()
-       {
-           return Pay - TaxRate;
-       }
+        public int TaxRate
+        { get; set; }
+
+        public int Pay
+        { get; set; }
+
+        public int CalculateTax()
+        {
+            return Pay - TaxRate;
+        }
     }
 }
