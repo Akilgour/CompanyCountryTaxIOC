@@ -71,7 +71,7 @@ namespace UnitTestProject1
             Assert.IsInstanceOfType(item, typeof(USATax));
         }
 
-        //XX
+        
 
         [TestMethod]
         public void GetSingle_UK_GetsCompanyBUKTax_Value()
