@@ -15,8 +15,8 @@ namespace Repository
             TaxRate = 40;
         }
 
-        public UKTax() { }
-        
+        public UKTax() : this(0) { }
+
         public int TaxRate
         { get; set; }
 
